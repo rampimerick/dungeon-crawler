@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://yarbi2nip4by"]
+
+[ext_resource type="PackedScene" uid="uid://biq0j7f07xkhp" path="res://assets/dungeon-environment/gltf/wall_doorway.gltf" id="1_n0kgq"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bsvug"]
+
+[node name="wall_doorway2" instance=ExtResource("1_n0kgq")]
+
+[node name="wall_doorway_door" parent="wall_doorway" index="0"]
+visible = false
+
+[node name="StaticBody3D" parent="wall_doorway/wall_doorway_door" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="wall_doorway/wall_doorway_door/StaticBody3D" index="0"]
+visible = false
+disabled = true
+
+[node name="CollisionShape3D" parent="wall_doorway/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_bsvug")

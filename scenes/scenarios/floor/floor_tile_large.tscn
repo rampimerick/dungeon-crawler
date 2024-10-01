@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqe6dv38iavnc"]
+
+[ext_resource type="PackedScene" uid="uid://bg3f6sf8t6q16" path="res://assets/dungeon-environment/gltf/floor_tile_large.gltf" id="1_gdfnt"]
+
+[node name="FloorTileLarge" instance=ExtResource("1_gdfnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0729741, 0)
