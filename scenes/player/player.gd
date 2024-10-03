@@ -25,13 +25,11 @@ func move(delta):
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 		player_body.basis = Basis.looking_at(direction)
-		%AnimationPlayer.play("Running_A")
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 		
 	if not is_on_floor():
 		velocity.y = velocity.y - (gravity * delta)
-		%AnimationPlayer.play("Jump_Idle")
 		
 	move_and_slide()
