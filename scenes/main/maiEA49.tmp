@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1fvpgt60eyma"]
+
+[ext_resource type="MeshLibrary" uid="uid://325462lt56m2" path="res://scenes/scenarios/floor/floor_tiles.tres" id="2_vmto8"]
+[ext_resource type="PackedScene" uid="uid://d0aavw7rh4xqo" path="res://scenes/player/player.tscn" id="3_j52vj"]
+[ext_resource type="MeshLibrary" uid="uid://cv2i5xbaw5xxb" path="res://scenes/scenarios/props/prop_tiles.tres" id="3_v7vxj"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("3_j52vj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.06924, 0.113353, 0.726033)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.995251, 0.0688296, -0.0688296, 0, 0.707107, 0.707107, 0.0973397, 0.703749, -0.703749, 0, 12.5139, 0)
+shadow_enabled = true
+
+[node name="FloorGridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.949881, 0)
+mesh_library = ExtResource("2_vmto8")
+data = {
+"cells": PackedInt32Array(65535, 0, 1048594, 65534, 3, 22, 65535, 3, 22, 0, 3, 22, 1, 3, 22, 2, 3, 22, 3, 3, 28, 2, 1, 22, 2, 65535, 22, 2, 65534, 22, 2, 65533, 22, 2, 65532, 22, 1, 65533, 22, 0, 65533, 22, 65535, 65533, 22, 65534, 65533, 22, 65533, 65533, 22, 65532, 65533, 22, 65532, 65534, 22, 65532, 65535, 22, 65532, 0, 22, 65532, 1, 22, 65532, 2, 22, 65532, 3, 22, 4, 1, 22, 4, 0, 22, 4, 65535, 22, 4, 65534, 22, 4, 65533, 22, 4, 65532, 22, 0, 65532, 22, 65535, 65532, 22, 65534, 65532, 22, 65533, 65532, 22, 65532, 65532, 22, 4, 2, 22, 4, 3, 22, 65531, 3, 28, 65531, 2, 22, 65531, 1, 22, 65531, 0, 22, 65531, 65535, 22, 65531, 65534, 22, 65530, 65534, 22, 65531, 65533, 22, 65531, 65532, 28, 65531, 65531, 22, 65532, 65531, 22, 65533, 65531, 22, 65534, 65531, 22, 65535, 65531, 22, 0, 65531, 22, 1, 65531, 22, 2, 65531, 22, 3, 65531, 22, 4, 65531, 22, 65531, 4, 22, 65532, 4, 22, 65533, 4, 22, 65533, 3, 22, 65534, 4, 22, 65535, 4, 22, 0, 4, 22, 1, 4, 22, 2, 4, 22, 3, 4, 22, 4, 4, 22, 65530, 4, 22, 65530, 3, 22, 65530, 2, 22, 65530, 1, 22, 65530, 0, 22, 65530, 65535, 22, 65530, 65533, 22, 65530, 65532, 22, 65530, 65531, 22, 3, 65532, 28, 65535, 65529, 31, 0, 65529, 31, 1, 65529, 31, 2, 65529, 31, 3, 65529, 31, 65534, 65529, 31, 65533, 65529, 31, 65533, 65528, 31, 65532, 65528, 31, 65534, 65528, 31, 65535, 65528, 31, 0, 65528, 31, 1, 65528, 31, 2, 65528, 31, 3, 65528, 31, 65532, 65529, 31, 65531, 65529, 31, 65531, 65528, 31)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="PropsGridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.877011, 0)
+mesh_library = ExtResource("3_v7vxj")
+data = {
+"cells": PackedInt32Array(65531, 65534, 1114157, 65533, 65533, 77, 65534, 3, 655443, 65531, 1, 77)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
