@@ -1,6 +1,6 @@
 extends Node3D
 
-var camera_speed := 2.0
+var camera_speed := 4.0
 @onready var camgimbalx := $CamGimbalX
 
 

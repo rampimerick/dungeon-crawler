@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1fvpgt60eyma"]
+[gd_scene load_steps=5 format=3 uid="uid://b1fvpgt60eyma"]
 
 [ext_resource type="MeshLibrary" uid="uid://325462lt56m2" path="res://scenes/scenarios/floor/floor_tiles.tres" id="2_vmto8"]
 [ext_resource type="PackedScene" uid="uid://d0aavw7rh4xqo" path="res://scenes/player/player.tscn" id="3_j52vj"]
 [ext_resource type="MeshLibrary" uid="uid://cv2i5xbaw5xxb" path="res://scenes/scenarios/props/prop_tiles.tres" id="3_v7vxj"]
+[ext_resource type="PackedScene" uid="uid://c7et7xkfhn1mf" path="res://scenes/enemies/skeleton_warrior.tscn" id="4_x1jbv"]
 
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("3_j52vj")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.06924, 0.113353, 0.726033)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.6619, 0.113353, 0.726033)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.995251, 0.0688296, -0.0688296, 0, 0.707107, 0.707107, 0.0973397, 0.703749, -0.703749, 0, 12.5139, 0)
@@ -28,3 +29,6 @@ data = {
 "cells": PackedInt32Array(65531, 65534, 1114157, 65533, 65533, 77, 65534, 3, 655443, 65531, 1, 77)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Skeleton_Warrior" parent="." instance=ExtResource("4_x1jbv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10501, -5.33381)
