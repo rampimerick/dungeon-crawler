@@ -4,7 +4,6 @@ class_name Player
 var current_state := player_states.MOVE
 enum player_states {MOVE, JUMP, ATTACK}
 
-
 @export var speed := 8.0
 @export var gravity := 75.0
 @export var jump_force := 20.0
@@ -14,7 +13,6 @@ enum player_states {MOVE, JUMP, ATTACK}
 @onready var camera = $CamGimbalY
 
 var angular_speed := 5.0
-
 
 var target_velocity = Vector3.ZERO
 var movement
@@ -45,7 +43,7 @@ func move(delta):
 		velocity.z = direction.z * speed
 		player_body.basis = Basis.looking_at(direction)
 	else:
-		animation_player.play("2H_Melee_Idle")
+		animation_player.play("Idle")
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 		
@@ -66,6 +64,9 @@ func jump():
 		animation_player.play("Jump_Start")
 		velocity.y = jump_force
 	reset_state()	
+
+func defend():
+	pass
 
 func reset_state():
 	current_state = player_states.MOVE
